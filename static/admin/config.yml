@@ -1,0 +1,132 @@
+backend:
+  name: git-gateway
+  repo: iteam-consulting/rodin
+media_folder: static/assets
+public_folder: /assets
+collections:
+  - name: Bio
+    label: bio
+    folder: bio
+    create: true
+    editor:
+      preview: false
+    identifier_field: artist_name
+    fields:
+      - name: artist_name
+        label: Artist's Name
+      - name: artist_origin
+        label: Artist's Origin
+      - name: artist_profile_pic
+        label: Artist's Profile Picture
+        widget: object
+        fields:
+          - name: profile_pic
+            label: Profile Pic
+            widget: image
+          - name: alt_text
+            label: Alt Text
+          - name: photo_cred
+            label: Photo Credit
+
+      - name: galleries
+        label: Galleries
+        widget: list
+        field: { name: gallery, label: Gallery }
+
+      - name: awards
+        label: Awards
+        widget: list
+        fields:
+          - { name: award, label: Award }
+          - { name: state_received, label: State Received }
+          - { name: city_received, label: City Received }
+          - { name: year_awarded, label: Year Awarded }
+
+      - name: articles
+        label: Articles
+        widget: list
+        fields:
+          - { name: article_title, label: Article Title }
+          - { name: article_hyperlink, label: Hyperlink }
+          - { name: date_published, label: Date Published, widget: datetime, default: "", date_format: "MM.DD.YYYY", hint: "Enter the date that the article was published.", time_format: false, picker_utc: false }
+
+      - name: selected_shows
+        label: Selected Shows
+        widget: list
+        fields:
+          - { name: show_name, label: Name of Show }
+          - { name: gallery_name, label: Gallery Name, required: false }
+          - { name: show_city, label: Show City }
+          - { name: show_state, label: Show State }
+          - { name: show_year, label: Show Year }
+
+      - name: selected_collections_installations
+        label: Selected Collections and Installations
+        widget: list
+        fields:
+          - { name: collection_name, label: Name of Collection }
+          - { name: gallery_name, label: Gallery Name }
+          - { name: city, label: City }
+          - { name: state, label: State }
+          - { name: year_installed, label: Year Installed }
+
+      - name: bibliography
+        label: Bibliography
+        widget: list
+        field: { name: reference, label: Reference }
+
+  - name: projects
+    label: Project
+    folder: projects
+    identifier_field: title
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - {
+          label: Category,
+          name: category_name,
+          widget: relation,
+          collection: categories,
+          searchFields: [category_name],
+          valueField: category_name,
+          displayFields: [category_name],
+          multiple: false,
+        }
+      - {
+          label: Project Images,
+          name: projectImages,
+          widget: list,
+          field:
+            {
+              label: Images,
+              name: images,
+              widget: image,
+              allow_multiple: true,
+            },
+        }
+      - { label: Description, name: description, widget: text }
+
+  - name: categories
+    label: Categories
+    identifier_field: slug
+    folder: categories
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: Category, name: category_name, widget: string }
+      - { label: Category Image, name: category_img, widget: image }
+      - { label: Slug, name: slug, widget: string }
+
+  - name: show_announcement
+    label: Show Announcement
+    folder: show_announcement
+    identifier_field: pdf
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {name: pdf, label: Pdf, widget: file }

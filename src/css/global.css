@@ -1,0 +1,43 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.onScreen {
+transition-duration: 0.15s;
+transition-delay: 0s;
+background-color: transparent;
+}
+
+.offScreen {
+transform: translateX(-100%);
+transition-duration: 0.15s;
+transition-delay: 0s;
+}
+
+.isOpaque {
+    opacity: .4;
+    background-color: black;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+    left: 288px;       
+}
+
+.isTransparent {
+    background-color: transparent;
+    z-index: -1;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+    left: 0;
+}
+
+.fontcolor {
+    color: #8a3014;
+}
+body.noScroll {
+    overflow-y: hidden;
+}
+
+
+
