@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: iteam-consulting/rodin
+  repo: iteam-software/jamieburnes
 media_folder: static/assets
 public_folder: /assets
 collections:
