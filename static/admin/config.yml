@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   repo: iteam-software/jamieburnes
+  branch: main
 media_folder: static/assets
 public_folder: /assets
 collections:
