@@ -34,7 +34,7 @@ const ProjectSection = ({ projectImages, title, description }) => {
   const images = projectImages.map((image, i) => (
       <Img
         key={i}
-        css={i == 0 ? firstImage : followingImages}
+        css={i === 0 ? firstImage : followingImages}
         fluid={image.childImageSharp.fluid}
         alt={title}
       />

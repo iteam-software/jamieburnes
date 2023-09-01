@@ -24,7 +24,7 @@ const Layout = ({ children, location }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleSidebar = () => setIsOpen(!isOpen);
   const closeSidebar = () => setIsOpen(false);
-  const isHome = location?.pathname == "/";
+  const isHome = location?.pathname === "/";
   const pageTitle = `${title} - ${startCase(location?.pathname) || "Home"}`;
   return (
     <>

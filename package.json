@@ -1,5 +1,5 @@
 {
-  "name": "rodin",
+  "name": "jamieburnes",
   "private": true,
   "description": "Website for Jamie Burnes Sculpture",
   "version": "0.1.0",
@@ -45,9 +45,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iteam-consulting/rodin"
+    "url": "https://github.com/iteam-software/jamieburnes"
   },
   "bugs": {
-    "url": "https://github.com/iteam-consulting/rodin/issues"
+    "url": "https://github.com/iteam-software/jamieburnes/issues"
   }
 }
