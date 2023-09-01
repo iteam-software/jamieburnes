@@ -238,7 +238,7 @@ export default function Nav({
       <div
         className={`${overLayClass} fixed w-full top-0 h-full z-40`}
         onClick={closeSidebar}
-      ></div>
+      />
     </div>
   );
 }

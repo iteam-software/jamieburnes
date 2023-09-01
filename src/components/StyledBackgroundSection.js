@@ -31,18 +31,18 @@ const BackgroundSection = ({ className }) => (
           document.documentElement.clientWidth ||
           document.body.clientWidth;
       }
-      const imageData =
-        width > 768
-          ? data.allFile.nodes[1].childImageSharp.fluid
-          : data.allFile.nodes[0].childImageSharp.fluid;
+
+      const desktop = data.allFile.nodes.find(n => n.childImageSharp.fluid.src.includes("home.jpg"));
+      const mobile = data.allFile.nodes.find(n => n.childImageSharp.fluid.src.includes("home-mobile.jpg"));
+
+      const imageData = width > 768 ? desktop.childImageSharp.fluid : mobile.childImageSharp.fluid;
       return (
         <BackgroundImage
           Tag="section"
           className={className}
           fluid={imageData}
           backgroundColor={`#040e18`}
-        >
-        </BackgroundImage>
+        />
       )
     }}
   />
