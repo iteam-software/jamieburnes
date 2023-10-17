@@ -1,5 +1,5 @@
 ---
 category_name: eagles
-category_img: /assets/gi9a2228.jpg
+category_img: /assets/tira-thumb.jpg
 slug: eagles
 ---

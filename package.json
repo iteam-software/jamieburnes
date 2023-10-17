@@ -4,6 +4,10 @@
   "description": "Website for Jamie Burnes Sculpture",
   "version": "0.1.0",
   "license": "MIT",
+  "engines": {
+    "node": "16",
+    "npm": "8"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
