@@ -7,5 +7,5 @@ projectImages:
   - /assets/gi9a2248.jpeg
   - /assets/gi9a2241-copy-3.jpeg
   - /assets/gi9a2228.jpeg
-description: "**Description coming soon**"
+description: "Description coming soon"
 ---
